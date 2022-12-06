@@ -29,7 +29,7 @@ func StartTimer() time.Time {
 	return time.Now()
 }
 
-// GetRuntimeMs() returns the time since the timer was started
+// GetRuntimeMs returns the time since the timer was started
 func GetRuntimeMs(start time.Time) time.Duration {
 	return time.Duration(time.Since(start).Microseconds())
 }
