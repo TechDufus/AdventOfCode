@@ -27,13 +27,13 @@ func getElves(file string) [][]int {
 		if line == "" {
 			elves = append(elves, elf)
 			elf = []int{}
-		} else {
-			calories, err := strconv.Atoi(line)
-			if err != nil {
-				log.Fatal(err)
-			}
-			elf = append(elf, calories)
+			continue
 		}
+		calories, err := strconv.Atoi(line)
+		if err != nil {
+			log.Fatal(err)
+		}
+		elf = append(elf, calories)
 	}
 	elves = append(elves, elf)
 	return elves
@@ -50,6 +50,17 @@ func getTopCalories(elves [][]int) int {
 	return mostCalories
 }
 
+func appendTopThree(topThree []int, calories int) []int {
+	for i, c := range topThree {
+		if calories > c {
+			topThree = append(topThree[:i], append([]int{calories}, topThree[i:]...)...)
+			topThree = topThree[:3]
+			break
+		}
+	}
+	return topThree
+}
+
 func getTopThreeCalories(elves [][]int) []int {
 	var topThree []int
 	for _, elf := range elves {
@@ -57,13 +68,7 @@ func getTopThreeCalories(elves [][]int) []int {
 		if len(topThree) < 3 {
 			topThree = append(topThree, calories)
 		} else {
-			for i, c := range topThree {
-				if calories > c {
-					topThree = append(topThree[:i], append([]int{calories}, topThree[i:]...)...)
-					topThree = topThree[:3]
-					break
-				}
-			}
+			topThree = appendTopThree(topThree, calories)
 		}
 	}
 	return topThree
