@@ -3,7 +3,6 @@ package day2
 import (
 	"fmt"
 	"strings"
-	"time"
 
 	"github.com/techdufus/AdventOfCode/2022/helpers"
 )
@@ -145,8 +144,6 @@ func getPartTwo(file string) int {
 
 func Answers() {
 	timer := helpers.StartTimer()
-	// sleep for 1 second to make sure the timer is accurate
-	time.Sleep(1 * time.Second)
 	fmt.Println("--- Day 2 Answers ---")
 	fmt.Println("    Part 1:", getPartOne(inputFile))
 	fmt.Println("    Part 2: ", getPartTwo(inputFile))
