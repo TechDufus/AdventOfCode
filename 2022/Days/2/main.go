@@ -1,3 +1,5 @@
+// Package day2 contains the solutions to the puzzles for Day 2 of the
+// Advent of Code 2022.
 package day2
 
 import (

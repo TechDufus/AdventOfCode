@@ -1,3 +1,5 @@
+// Package day1 contains the solutions to the puzzles for Day 1 of the
+// Advent of Code 2022.
 package day1
 
 import (
@@ -65,7 +67,11 @@ func getTopThreeCalories(elves [][]int) []int {
 	var topThree []int
 	for _, elf := range elves {
 		calories := getCaloriesSum(elf)
-		topThree = appendTopThree(topThree, calories)
+		if len(topThree) < 3 {
+			topThree = append(topThree, calories)
+		} else {
+			topThree = appendTopThree(topThree, calories)
+		}
 	}
 	return topThree
 }

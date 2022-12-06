@@ -1,3 +1,4 @@
+// Package helpers contains helper functions for the Advent of Code 2022 solutions
 package helpers
 
 import (
