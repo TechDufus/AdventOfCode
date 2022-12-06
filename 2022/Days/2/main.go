@@ -148,6 +148,6 @@ func Answers() {
 	timer := helpers.StartTimer()
 	fmt.Println("--- Day 2 Answers ---")
 	fmt.Println("    Part 1:", getPartOne(inputFile))
-	fmt.Println("    Part 2: ", getPartTwo(inputFile))
+	fmt.Println("    Part 2:", getPartTwo(inputFile))
 	fmt.Println("  Execution Time:", helpers.GetRuntimeMs(timer))
 }

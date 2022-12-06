@@ -83,7 +83,7 @@ func Answers() {
 	mostCalories := getTopCalories(elves)
 	topThreeCalories := getTopThreeCalories(elves)
 	fmt.Println("--- Day 1 Answers ---")
-	fmt.Println("    Part1:", mostCalories)
-	fmt.Println("    Part2:", getCaloriesSum(topThreeCalories))
+	fmt.Println("    Part 1:", mostCalories)
+	fmt.Println("    Part 2:", getCaloriesSum(topThreeCalories))
 	fmt.Println("  Execution Time:", helpers.GetRuntimeMs(timer))
 }
