@@ -15,7 +15,6 @@ git clone https://github.com/techdufus/AdventOfCode.git
 ## Running the code
 To run the code for the answers, simply run the `main.go` file at the root of this directory
 ```bash
-cd AdventOfCode/2022/Days/1
 go run main.go
 ```
 This will run the code and print the answers to the puzzles for the completed days to the terminal.
@@ -29,8 +28,6 @@ This will run all the tests for the code and print the results to the terminal.
 
 ## Authors
 [TechDufus](https://github.com/techdufus)
-## License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
 
 ## Acknowledgments
 [Advent of Code](https://adventofcode.com/) for creating the puzzles.
