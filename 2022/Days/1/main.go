@@ -1,27 +1,12 @@
-package main
+package day1
 
 import (
-	"bufio"
 	"fmt"
 	"log"
-	"os"
 	"strconv"
+
+	"github.com/techdufus/AdventOfCode/2022/helpers"
 )
-
-func getInput(file string) []string {
-	f, err := os.Open(file)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer f.Close()
-
-	var result []string
-	scanner := bufio.NewScanner(f)
-	for scanner.Scan() {
-		result = append(result, scanner.Text())
-	}
-	return result
-}
 
 func getCaloriesSum(elf []int) int {
 	total := 0
@@ -34,7 +19,7 @@ func getCaloriesSum(elf []int) int {
 func getElves(file string) [][]int {
 	elves := [][]int{}
 	elf := []int{}
-	for _, line := range getInput(file) {
+	for _, line := range helpers.GetInput(file) {
 		if line == "" {
 			elves = append(elves, elf)
 			elf = []int{}
@@ -80,11 +65,12 @@ func getTopThreeCalories(elves [][]int) []int {
 	return topThree
 }
 
-func main() {
-	elves := getElves("input.txt")
+// Answers prints the answers to the day's puzzles
+func Answers() {
+	elves := getElves("./Days/1/input.txt")
 	mostCalories := getTopCalories(elves)
 	topThreeCalories := getTopThreeCalories(elves)
-	fmt.Println("Most calories:", mostCalories)
-	fmt.Println("Top 3 calories:", topThreeCalories)
-	fmt.Println("Top 3 SUM:", getCaloriesSum(topThreeCalories))
+	fmt.Println("--- Day 1 Answers ---")
+	fmt.Println("    Part1:", mostCalories)
+	fmt.Println("    Part2:", getCaloriesSum(topThreeCalories))
 }
