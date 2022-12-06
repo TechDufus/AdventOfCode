@@ -30,6 +30,5 @@ This will run all the tests for the code and print the results to the terminal.
 [TechDufus](https://github.com/techdufus)
 
 ## Acknowledgments
-[Advent of Code](https://adventofcode.com/) for creating the puzzles.
-
-[Go](https://golang.org/) for making it fun to solve the puzzles.
+- [Advent of Code](https://adventofcode.com/) for creating the puzzles.
+- [Go](https://golang.org/) for making it fun to solve the puzzles.
