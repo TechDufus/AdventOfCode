@@ -65,11 +65,7 @@ func getTopThreeCalories(elves [][]int) []int {
 	var topThree []int
 	for _, elf := range elves {
 		calories := getCaloriesSum(elf)
-		if len(topThree) < 3 {
-			topThree = append(topThree, calories)
-		} else {
-			topThree = appendTopThree(topThree, calories)
-		}
+		topThree = appendTopThree(topThree, calories)
 	}
 	return topThree
 }
