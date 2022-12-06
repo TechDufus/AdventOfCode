@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 	"testing"
+	"time"
 )
 
 func TestGetInput(t *testing.T) {
@@ -47,4 +48,20 @@ func TestGetInput(t *testing.T) {
 
 	// Clean up the test file
 	os.Remove(testFile)
+}
+
+func TestStartTimerAndGetRuntimeMs(t *testing.T) {
+	// Start the timer
+	start := StartTimer()
+
+	// Wait for a short amount of time
+	time.Sleep(time.Millisecond)
+
+	// Get the runtime in milliseconds
+	runtime := GetRuntimeMs(start)
+
+	// Assert that the runtime is greater than 0
+	if runtime <= 0 {
+		t.Errorf("Expected runtime to be greater than 0, but got %d", runtime)
+	}
 }

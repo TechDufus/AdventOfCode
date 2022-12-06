@@ -71,10 +71,12 @@ func getTopThreeCalories(elves [][]int) []int {
 
 // Answers prints the answers to the day's puzzles
 func Answers() {
+	timer := helpers.StartTimer()
 	elves := getElves(inputFile)
 	mostCalories := getTopCalories(elves)
 	topThreeCalories := getTopThreeCalories(elves)
 	fmt.Println("--- Day 1 Answers ---")
 	fmt.Println("    Part1:", mostCalories)
 	fmt.Println("    Part2:", getCaloriesSum(topThreeCalories))
+	fmt.Println("  Execution Time:", helpers.GetRuntimeMs(timer))
 }
