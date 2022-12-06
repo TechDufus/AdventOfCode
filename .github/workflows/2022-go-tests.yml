@@ -1,4 +1,4 @@
-name: Run Go Tests
+name: Run Go Tests - 2022
 
 on:
   push:
