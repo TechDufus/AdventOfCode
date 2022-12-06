@@ -8,6 +8,10 @@ import (
 	"github.com/techdufus/AdventOfCode/2022/helpers"
 )
 
+const (
+	inputFile = "./Days/1/input.txt"
+)
+
 func getCaloriesSum(elf []int) int {
 	total := 0
 	for _, c := range elf {
@@ -67,7 +71,7 @@ func getTopThreeCalories(elves [][]int) []int {
 
 // Answers prints the answers to the day's puzzles
 func Answers() {
-	elves := getElves("./Days/1/input.txt")
+	elves := getElves(inputFile)
 	mostCalories := getTopCalories(elves)
 	topThreeCalories := getTopThreeCalories(elves)
 	fmt.Println("--- Day 1 Answers ---")

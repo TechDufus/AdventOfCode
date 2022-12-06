@@ -7,11 +7,14 @@ import (
 	"github.com/techdufus/AdventOfCode/2022/helpers"
 )
 
-var (
+const (
 	inputFile = "./Days/2/input.txt"
 	gameWin   = 6
 	gameTie   = 3
 	gameLoss  = 0
+)
+
+var (
 	// opponentWinningMoves key is the move the opponent made and the value is the playerMove
 	// that it beats.
 	opponentWinningMoves = map[string]string{
